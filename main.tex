@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+    }
+    
+\title{TDA Project - MLB Pitchers}
+\author{Luke Vandertie}
+\date{Spring 2017}
+
+
+\begin{document}
+
+\maketitle
+\section{Background}
+
+I was first introduced to the use of Topological Data Analysis (TDA) in sports through Muthu Alagappan's (Ayasdi Inc.) \href{http://www.sloansportsconference.com/wp-content/uploads/2012/03/Alagappan-Muthu-EOSMarch2012PPT.pdf}{NBA Paper}, presented to us in class.  I have a passion for baseball, so I did some research on TDA use in baseball and ran across an article \href{http://www.baseballprospectus.com/article.php?articleid=26142#commentMessage}{an article} by Baseball Prospectus.  They used Topological Data Analysis to group hitters into categories based on a variety of stats.  The use of the Mapper Algorithm allowed them to input 5 statistics for each player and create a visual representation of these connections and groupings.  As the Bullpen Catcher for the University of Notre Dame Varsity Baseball team, I have experience with the defensive side of baseball, specifically the pitchers.  I am seeking to recreate the Baseball Prospectus type of analysis, but for pitchers in Major League Baseball, as well as attempting to answer some of the community questions left as comments in the original Baseball Prospectus article (where applicable).  
+
+\section{Prior Work}
+
+Discuss the NBA work briefly, then explain more what Baseball Prospectus did.  Had to reason out what stats to use, etc.
+
+\section{Decisions}
+
+Why I chose the stats I did, general approach to project (standardize statistics per innings)
+
+Relievers vs Starters?  Two separate analyses (could maybe use Games Started (GS) to add this component)
+A pitcher is defined by how they get outs.  Group based on how well they prevented runs and how they did it.
+\begin{enumerate}
+    \item Earned Run Average or Runs Allowed Average (ERA or RAA) - PICK ONE - How succesful were the pitchers at preventing runs
+
+    \item Strikeouts per Nine Innings (K/9) - Were they a strikeout pitcher or trust the defense to get outs?
+
+    \item Fast Ball Percentage (FB\%) - What type of pitches did they like to throw?  Prefer off-speed?
+
+    \item Batting Average on Balls in Play (BABIP) - Were balls hit in play well struck?
+
+    \item Ratio of Ground Outs to Air Outs (GO/AO) - Ratio of ground ball outs to outs in the air.  Further defines how they get their outs
+\end{enumerate}
+\section{Results}
+
+General results found (variety of pitchers, relative sizes, etc.)
+
+\section{Conclusions}
+
+Draw any immediate conclusions 
+
+Then try to address the community questions/comments:
+\begin{enumerate}
+    
+
+    \item I think another cool angle to take would be to compute this over different time periods, and see whether some clusters have gained or lost players, or whether there were other clusters in the past that have since gone "extinct".
+    
+    this was the first thing i thought of-- given the decline in offense, can we use TDA to identify which player types have been able to capitalize on the new pitching trends, and which have struggled.
+    
+    \item Can't wait to see a similar approach taken for pitchers ... although perhaps not limited to "outputs" (e.g. for hitters, ISO / AVG / OBP) but inclusive of "inputs" (e.g. \# of pitches, types of pitches, fastball speed ... ) ?
+
+    I've always thought there were a relatively small number of pitcher 'archetypes' ...
+
+    \item my mind wanders to the speculation we do each offseason when a team seems to have a "plan" that we can't understand. Why did Boston choose the pitchers they chose? Why did the A's and Padres build the teams they built? Categorizing players and their connections, and how they fit in with the league as a whole, might give us evidence to build more informed theories from.
+
+    \item Typically what you'll want to do before running a cluster solution on your population/sample is to cluster the variable set itself and let the data tell you which set of indicators provide the widest information spread/are least correlated with each other. Theory drives which variables go into that initial analysis but the clustering approach itself finds the variables that are most orthogonal with each other.
+    
+    \item Feeding off of what tylersnotes said, maybe you use this to see how teams have been built over the years. Or show how WS champions have been built over the years? Or what separates them from all other teams in a given year? Just a thought. Great article, Jeff.
+    
+    \item 
+\end{enumerate}
+
+\end{document}
